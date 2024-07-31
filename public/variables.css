@@ -1,0 +1,30 @@
+:root {
+  --lighter-bg: #c5c5c5;
+  --darker-bg: #dadada;
+  --header-bg: #ffffff;
+  --message-bg: #ffffff;
+
+  --text-color: #000;
+
+  --blue: rgb(108, 108, 250);
+  --green: rgb(31, 187, 57);
+  --red: rgb(233, 67, 67);
+  --yellow: rgb(255, 230, 4);
+  --orange: #ff914d;
+
+}
+
+:root.dark {
+  --lighter-bg: #303030;
+  --darker-bg: #202020;
+  --header-bg: #505050;
+  --message-bg: #303030;
+
+
+  --text-color: #fff;
+
+  --blue: rgb(79, 79, 187);
+  --green: rgb(46, 155, 64);
+  --red: rgb(197, 84, 84);
+  --yellow: rgb(255, 230, 4);
+}

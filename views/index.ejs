@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message Board</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Message Board</h1>
-  <ul>
-    <% messages.forEach(message => { %>
-      <li><strong><%= message.user %></strong>: <%= message.text %> (added on <%= message.added.toDateString() %>)</li>
-    <% }) %>
-  </ul>
-  <a href="/new">Add a new message</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Board</title>
+
+    <script src="/theme.js"></script>
+
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="variables.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="message.css" />
+  </head>
+  <body>
+    <div id="theme-toggle">
+    </div>
+    <div class="container">
+      <header class="header">
+        <h1>Odin Board</h1>
+        <a href="/new" class="new-button">New Message</a>
+      </header>
+      <ul class="messages-container">
+        <% messages.forEach(message => { %>
+        <li class="message">
+          <p class="username"><%= message.user %></p>
+          <p class="date"><%= message.added.toDateString() %></p>
+          <p class="text"><%= message.text %></p>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
 </html>

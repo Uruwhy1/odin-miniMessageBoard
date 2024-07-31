@@ -4,18 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Message</title>
+
+    <script src="/theme.js"></script>
+
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="variables.css" />
+
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="form.css" />
   </head>
   <body>
-    <h1>Add a New Message</h1>
-    <form action="/new" method="POST">
-      <label for="user">User:</label>
-      <input type="text" id="user" name="user" required />
-      <br />
-      <label for="message">Message:</label>
-      <input type="text" id="message" name="message" required />
-      <br />
-      <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+      <header class="header">
+        <h1>Odin Board</h1>
+        <a href="/" class="new-button">Back</a>
+      </header>
+      <form action="/new" method="POST">
+        <div>
+          <label for="user">User:</label>
+          <input class="input" type="text" id="user" name="user" required />
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea class="input" type="text" id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </body>
 </html>
