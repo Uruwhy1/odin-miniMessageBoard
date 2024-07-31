@@ -4,14 +4,14 @@ const router = express.Router();
 // Sample messages
 const messages = [
   {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
+    text: "Hello World!",
+    user: "Charles (Leclerc)",
+    added: new Date("2024-07-31T15:30:00Z"), // Custom date
   },
   {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
+    text: "I am a completely real message.",
+    user: "Fernando Alonso",
+    added: new Date("2024-07-31T12:00:00Z"), // Custom date
   },
 ];
 
@@ -25,7 +25,7 @@ router.get("/new", (req, res) => {
 
 router.post("/new", (req, res) => {
   const { message, user } = req.body;
-  messages.push({ text: message, user: user, added: new Date() });
+  messages.unshift({ text: message, user: user, added: new Date() });
   res.redirect("/");
 });
 
