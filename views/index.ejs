@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="message.css" />
   </head>
   <body>
-    <div id="theme-toggle">
-    </div>
+    <div id="theme-toggle"></div>
     <div class="container">
       <header class="header">
         <h1>Odin Board</h1>
@@ -26,7 +25,14 @@
         <% messages.forEach(message => { %>
         <li class="message">
           <p class="username"><%= message.user %></p>
-          <p class="date"><%= message.added.toDateString() %></p>
+          <p class="date"><%= message.added.toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+          });
+           %></p>
           <p class="text"><%= message.text %></p>
         </li>
         <% }) %>
