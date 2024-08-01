@@ -49,6 +49,8 @@ body * {
 
   background-color: var(--header-bg);
   color: var(--yellow);
+
+  cursor: pointer;
 }
 
 #theme-toggle svg {
